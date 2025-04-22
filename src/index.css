@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply text-gray-800 font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4;
+  }
+}
+
+.bg-navy-900 {
+  background-color: #0a1930;
+}
+
+.bg-pink-100 {
+  background-color: #fce7f3;
+}
+
+.bg-orange-100 {
+  background-color: #ffedd5;
+}
+
+.bg-green-100 {
+  background-color: #dcfce7;
+}
+
+.bg-purple-100 {
+  background-color: #f3e8ff;
+}
+
+.bg-pink-500 {
+  background-color: #ec4899;
+}
+
+.bg-orange-500 {
+  background-color: #f97316;
+}
+
+.bg-green-500 {
+  background-color: #22c55e;
+}
+
+.bg-purple-500 {
+  background-color: #a855f7;
+}
+
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
